@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Predicting Remaining Useful Life (RUL) of Turbofan Engines
 
 ## Internship Organization
@@ -157,3 +158,6 @@ Kushagra Pandey
 Machine Learning Intern
 
 Uniconvergence Technology (UCT)
+=======
+# TURBOFAN-RUL-PREDICTION
+>>>>>>> 38a7b151c82cb4336125687805bf42b18bf4c85d
