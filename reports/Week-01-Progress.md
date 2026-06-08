@@ -1,80 +1,123 @@
-WEEKLY PROGRESS REPORT
+# Week 01 Progress Report
 
-Name: Kushagra Pandey
-Domain: Machine Learning
-Date of Submission: 08 June 2026
-Week Ending: 01
+## Project
 
+Predicting Remaining Useful Life (RUL) of Turbofan Engines
 
-I. OVERVIEW
+## Duration
 
-During the first week of the Machine Learning Internship, the primary focus was on understanding
-the internship objectives, studying the assigned projects, exploring the datasets, and setting up the
-required development environment. The selected projects are Predicting Remaining Useful Life
-(RUL) of Turbofan Engines and Smart City Traffic Forecasting. Initial research was conducted to
-understand the business applications, dataset structures, and suitable machine learning techniques
-for solving these problems. A structured learning plan was also created to guide project execution
-over the upcoming weeks.
+Week 01
 
+---
 
-II. ACHIEVEMENTS
+## Activities Completed
 
-1. Project Familiarization
-- Studied project objectives, datasets, and deliverables.
-- Understood predictive maintenance and traffic forecasting applications.
-- Identified suitable ML approaches.
-2. Dataset Exploration
-Project 6: Turbofan Engine RUL Prediction
-- Examined operational settings and sensor measurements.
-- Studied Remaining Useful Life prediction concepts.
-- Identified important variables affecting degradation.
-Project 9: Smart City Traffic Forecasting
-- Explored traffic dataset features.
-- Investigated temporal traffic patterns.
-- Studied effects of weekdays, weekends, and holidays.
-3. Development Environment Setup
-- Configured Python environment.
-- Installed NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, and XGBoost.
-- Set up Jupyter Notebook and VS Code.
-4. Learning and Research
-- Reviewed ML, preprocessing, and feature engineering concepts.
-- Studied regression and time-series forecasting methods.
-- Collected research papers and tutorials.
+### Project Understanding
 
+* Studied the project objectives and expected deliverables.
+* Understood the concept of Predictive Maintenance and Remaining Useful Life (RUL) prediction.
+* Explored industrial applications of predictive maintenance in aerospace and manufacturing sectors.
+* Reviewed the NASA C-MAPSS Turbofan Engine dataset documentation.
 
-III. CHALLENGES
+### Dataset Exploration
 
-- Understanding complex sensor data relationships.
-- Learning time-series forecasting concepts and feature engineering.
-- Interpreting datasets and preprocessing requirements.
+* Downloaded and examined the FD001 dataset.
+* Analyzed dataset structure and feature descriptions.
+* Identified operational settings and sensor measurements.
+* Studied training and testing dataset formats.
 
+### Preliminary Data Analysis
 
-IV. LEARNING RESOURCES
+* Performed initial dataset inspection.
+* Checked dataset dimensions and feature information.
+* Verified data quality and missing values.
+* Generated statistical summaries of sensor measurements.
 
-Python Docs: https://docs.python.org/3/
-NumPy: https://numpy.org/doc/
-Pandas: https://pandas.pydata.org/docs/
-Scikit-Learn: https://scikit-learn.org/stable/
-Kaggle Learn: https://www.kaggle.com/learn
-Google ML Crash Course: https://developers.google.com/machine-learning/crash-course
-Google Scholar: https://scholar.google.com/
-IEEE Xplore: https://ieeexplore.ieee.org/
+### Remaining Useful Life (RUL) Analysis
 
+* Studied the concept of Remaining Useful Life (RUL).
+* Understood how RUL is calculated from engine operational cycles.
+* Generated and verified RUL labels for sample engine records.
+* Investigated engine degradation behavior over operational cycles.
 
-V. NEXT WEEK'S GOALS
+### Correlation and Sensor Analysis
 
-Project 6:
-- Perform EDA and preprocessing.
-- Generate RUL labels.
-- Build baseline ML models.
-Project 9:
-- Analyze traffic patterns.
-- Create visualizations.
-- Build baseline forecasting models.
+* Generated a correlation heatmap to understand relationships among operational settings and sensor measurements.
+* Identified highly correlated features for future analysis.
+* Explored sensor trends across engine life cycles.
+* Investigated degradation patterns in selected sensors.
 
+### Research and Learning
 
-VI. ADDITIONAL COMMENTS
+* Studied predictive maintenance methodologies.
+* Reviewed machine learning approaches commonly used for RUL prediction.
+* Explored regression-based techniques suitable for industrial sensor data.
+* Collected technical resources and research material for future implementation phases.
 
-The first week provided a strong foundation for both projects through dataset exploration, research,
-and environment setup. The knowledge gained will support efficient model development and
-experimentation in the coming weeks.
+---
+
+## Challenges Faced
+
+### Understanding Sensor Data
+
+* The dataset contains multiple sensor measurements and operational settings.
+* Understanding the impact of each sensor on engine degradation required additional investigation.
+
+### Remaining Useful Life Calculation
+
+* Required careful understanding of engine life cycles and failure progression.
+* Additional analysis was needed to verify the correctness of generated RUL values.
+
+### Feature Interpretation
+
+* Understanding the practical significance of individual sensor measurements was challenging during the initial exploration phase.
+
+---
+
+## Learning Outcomes
+
+During Week 01, I learned:
+
+* Fundamentals of Predictive Maintenance.
+* Remaining Useful Life (RUL) prediction concepts.
+* Working with industrial sensor datasets.
+* Exploratory Data Analysis techniques.
+* Correlation analysis and visualization.
+* Engine degradation behavior analysis.
+* Data preparation strategies for machine learning projects.
+
+---
+
+## Planned Activities for Week 02
+
+### Data Preparation
+
+* Perform detailed exploratory data analysis.
+* Select important sensor features.
+* Prepare training and testing datasets.
+
+### Feature Engineering
+
+* Improve RUL dataset preparation.
+* Analyze feature importance.
+* Investigate sensor degradation patterns.
+
+### Model Development
+
+* Build baseline machine learning models.
+* Compare model performance.
+* Establish evaluation metrics for RUL prediction.
+
+---
+
+## Status
+
+Week 01 successfully completed.
+
+Current Progress:
+
+* Dataset understanding completed.
+* Initial EDA completed.
+* RUL generation completed.
+* Correlation analysis completed.
+* Ready to begin feature engineering and model development in Week 02.
