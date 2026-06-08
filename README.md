@@ -1,105 +1,154 @@
-<<<<<<< HEAD
-# Predicting Remaining Useful Life (RUL) of Turbofan Engines
+# Turbofan Engine Remaining Useful Life (RUL) Prediction
 
-## Internship Organization
+## Organization
 
-**Company:** Uniconvergence Technology (UCT)
+**Uniconvergence Technology (UCT)**
 
-This project is being carried out as part of the Machine Learning Internship Program at UCT. UCT works in areas such as IoT, AI/ML, Smart Cities, Digital Transformation, Industrial Automation, and Predictive Analytics. The objective is to apply machine learning techniques to solve real-world industrial problems related to predictive maintenance.
-
----
-
-## Project Background
-
-Unexpected equipment failures can cause significant operational losses in industries. Predictive maintenance helps organizations monitor equipment health and estimate when a machine is likely to fail.
-
-In this project, sensor measurements collected from turbofan engines are analyzed to estimate the Remaining Useful Life (RUL) of an engine before failure occurs.
+This project is being developed as part of the Machine Learning Internship Program at Uniconvergence Technology (UCT). UCT works in areas such as IoT, AI/ML, Smart Cities, Digital Transformation, Industrial Automation, and Predictive Analytics. The objective is to apply machine learning techniques to solve industrial predictive maintenance problems using real-world sensor data.
 
 ---
 
-## Problem Statement
+# Project Background
 
-The goal of this project is to predict the number of operational cycles remaining before a turbofan engine fails using operational settings and sensor measurements.
+In modern industrial environments, equipment failures can result in significant operational losses, safety risks, and maintenance expenses. Traditional maintenance strategies often rely on fixed schedules or reactive repairs after failure occurs.
 
-The project uses the NASA C-MAPSS FD001 dataset, which contains degradation data from multiple engines operating under normal and faulty conditions.
+Predictive Maintenance aims to overcome these limitations by monitoring equipment health and estimating the remaining operational life of machines before failures occur.
+
+Turbofan engines generate large volumes of sensor and operational data during their lifecycle. By analyzing these measurements, machine learning models can estimate the Remaining Useful Life (RUL) of an engine and help organizations schedule maintenance proactively.
 
 ---
 
-## Why This Problem Is Important
+# Problem Statement
 
-Predictive maintenance is widely used in:
+The objective of this project is to predict the number of operational cycles remaining before a turbofan engine fails.
+
+Using operational settings and sensor measurements collected from engines throughout their lifecycle, the model must estimate the Remaining Useful Life (RUL) for each engine.
+
+The project uses the NASA C-MAPSS dataset, a widely used benchmark dataset for predictive maintenance research.
+
+---
+
+# Problem Relevance
+
+Predictive Maintenance has become a critical application of Artificial Intelligence and Machine Learning across various industries.
+
+### Applications
 
 * Aerospace Industry
-* Manufacturing Industry
+* Manufacturing Plants
 * Industrial Automation
 * Smart Factories
 * Transportation Systems
+* Energy Sector
 
-Benefits include:
+### Benefits
 
-* Reduced maintenance costs
-* Lower downtime
-* Improved equipment reliability
-* Better resource planning
-* Increased operational efficiency
-
----
-
-## Dataset Information
-
-Dataset Used: NASA C-MAPSS FD001
-
-Dataset Characteristics:
-
-* 100 training engines
-* 100 testing engines
-* 3 operational settings
-* 21 sensor measurements
-* Single operating condition
-* Single fault mode
-
-Target Variable:
-
-* Remaining Useful Life (RUL)
+* Reduced downtime
+* Lower maintenance costs
+* Increased equipment reliability
+* Improved operational efficiency
+* Better maintenance scheduling
+* Enhanced safety
 
 ---
 
-## Week 1 Activities Completed
+# Dataset Description
 
-### 1. Dataset Understanding
+### Dataset
 
-* Downloaded and explored the FD001 dataset.
-* Studied dataset structure and feature descriptions.
-* Identified operational settings and sensor measurements.
+NASA C-MAPSS Turbofan Engine Dataset
 
-### 2. Data Exploration
+### Dataset Used
 
-Performed initial exploratory data analysis (EDA):
+FD001
 
-* Dataset shape analysis
-* Data type inspection
+### Dataset Characteristics
+
+* 100 Training Engines
+* 100 Testing Engines
+* 1 Operating Condition
+* 1 Fault Mode
+* 3 Operational Settings
+* 21 Sensor Measurements
+
+### Target Variable
+
+Remaining Useful Life (RUL)
+
+RUL is calculated as:
+
+```text
+RUL = Maximum Engine Cycle - Current Cycle
+```
+
+---
+
+# Project Objectives
+
+* Understand engine degradation behavior.
+* Analyze operational and sensor measurements.
+* Generate Remaining Useful Life labels.
+* Perform exploratory data analysis.
+* Develop machine learning models for RUL prediction.
+* Evaluate model performance using regression metrics.
+* Compare different prediction approaches.
+
+---
+
+# Project Methodology
+
+## Phase 1: Data Understanding
+
+* Dataset exploration
+* Data quality assessment
+* Missing value analysis
 * Statistical summary generation
-* Engine count analysis
-* Missing value verification
 
-### 3. Remaining Useful Life (RUL) Generation
+## Phase 2: Data Preprocessing
 
-* Understood the concept of Remaining Useful Life.
-* Generated RUL labels for training data.
-* Verified RUL calculations for sample engines.
+* RUL label generation
+* Feature analysis
+* Data cleaning
+* Dataset preparation
 
-### 4. Correlation Analysis
+## Phase 3: Exploratory Data Analysis
 
-* Generated a correlation heatmap.
-* Analyzed relationships between operational settings and sensor measurements.
-* Identified highly correlated variables for future feature selection.
+* Engine lifecycle analysis
+* Correlation analysis
+* Sensor trend analysis
+* Degradation pattern identification
 
-### 5. Sensor Trend Analysis
+## Phase 4: Feature Engineering
 
-* Examined sensor behavior across engine life cycles.
-* Investigated degradation patterns in selected sensors.
+* Feature selection
+* Sensor importance analysis
+* Data transformation
+
+## Phase 5: Model Development
+
+Machine learning models to be evaluated:
+
+* Linear Regression
+* Random Forest Regressor
+* XGBoost Regressor
+* Gradient Boosting Regressor
+
+Advanced models (optional):
+
+* LSTM
+* GRU
+
+## Phase 6: Evaluation
+
+Performance metrics:
+
+* RMSE (Root Mean Squared Error)
+* MAE (Mean Absolute Error)
+* R² Score
 
 ---
+
+# Implementation Details
 
 ## Tools and Technologies
 
@@ -108,56 +157,123 @@ Performed initial exploratory data analysis (EDA):
 * NumPy
 * Matplotlib
 * Seaborn
+* Scikit-Learn
 * Jupyter Notebook
 * Git & GitHub
 
+## Workflow
+
+1. Load Dataset
+2. Explore Dataset
+3. Generate RUL Labels
+4. Perform EDA
+5. Engineer Features
+6. Train Models
+7. Evaluate Performance
+8. Compare Results
+9. Generate Insights
+
 ---
 
-## Repository Structure
+# Project Structure
 
 ```text
-Turbofan-RUL-Prediction/
-│
+TURBOFAN-RUL-PREDICTION/
+
 ├── data/
+│   ├── train_FD001.txt
+│   ├── test_FD001.txt
+│   └── RUL_FD001.txt
+│
 ├── notebooks/
+│   ├── 01_EDA_FD001.ipynb
+│   ├── 02_Preprocessing.ipynb
+│   └── 03_Model_Training.ipynb
+│
 ├── images/
+│
 ├── reports/
+│   ├── Week-01-Progress.md
+│   ├── Week-02-Progress.md
+│   └── Final_Report.pdf
+│
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## Learning Outcomes
+# Current Progress
 
-During Week 1, I learned:
+## Week 01
 
-* Fundamentals of Predictive Maintenance
-* Remaining Useful Life (RUL) concepts
-* Working with industrial sensor datasets
-* Exploratory Data Analysis techniques
-* Correlation analysis and visualization
-* Dataset preprocessing fundamentals
+Completed:
+
+* Project familiarization
+* Dataset understanding
+* Dataset exploration
+* Missing value analysis
+* Initial exploratory data analysis
+* Correlation analysis
+* Sensor trend analysis
+* RUL concept study
+
+## Upcoming Work
+
+* Feature engineering
+* Model development
+* Performance evaluation
+* Result analysis
 
 ---
 
-## Next Steps (Week 2)
+# Results
 
-* Perform advanced exploratory data analysis.
-* Select important sensor features.
-* Prepare training and testing datasets.
-* Build baseline machine learning models.
-* Evaluate model performance using suitable metrics.
+### Exploratory Data Analysis
+
+* Dataset successfully explored.
+* Sensor relationships analyzed using correlation heatmaps.
+* Initial degradation patterns identified.
+
+### Model Results
+
+To be updated after model training.
+
+| Model             | RMSE    | MAE     | R² Score |
+| ----------------- | ------- | ------- | -------- |
+| Linear Regression | Pending | Pending | Pending  |
+| Random Forest     | Pending | Pending | Pending  |
+| XGBoost           | Pending | Pending | Pending  |
 
 ---
 
-## Author
+# Key Learnings
 
-Kushagra Pandey
+Through this project, I learned:
+
+* Predictive Maintenance concepts
+* Remaining Useful Life (RUL) estimation
+* Industrial sensor data analysis
+* Exploratory Data Analysis (EDA)
+* Feature engineering techniques
+* Regression modeling
+* Machine Learning workflow for industrial applications
+
+---
+
+# Future Improvements
+
+* Train on FD002, FD003, and FD004 datasets.
+* Implement deep learning approaches (LSTM/GRU).
+* Deploy the model using Streamlit or Flask.
+* Build an interactive predictive maintenance dashboard.
+
+---
+
+# Author
+
+**Kushagra Pandey**
 
 Machine Learning Intern
 
-Uniconvergence Technology (UCT)
-=======
-# TURBOFAN-RUL-PREDICTION
->>>>>>> 38a7b151c82cb4336125687805bf42b18bf4c85d
+**Uniconvergence Technology (UCT)**
