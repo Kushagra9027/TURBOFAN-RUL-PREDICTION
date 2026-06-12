@@ -75,8 +75,6 @@ FD001
 
 Remaining Useful Life (RUL)
 
-RUL is calculated as:
-
 ```text
 RUL = Maximum Engine Cycle - Current Cycle
 ```
@@ -107,7 +105,6 @@ RUL = Maximum Engine Cycle - Current Cycle
 ## Phase 2: Data Preprocessing
 
 * RUL label generation
-* Feature analysis
 * Data cleaning
 * Dataset preparation
 
@@ -118,18 +115,15 @@ RUL = Maximum Engine Cycle - Current Cycle
 * Sensor trend analysis
 * Degradation pattern identification
 
-## Phase 4: Feature Engineering
+## Phase 4: Model Development
 
-* Feature selection
-* Sensor importance analysis
-* Data transformation
-
-## Phase 5: Model Development
-
-Machine learning models to be evaluated:
+Models evaluated:
 
 * Linear Regression
 * Random Forest Regressor
+
+Models planned:
+
 * XGBoost Regressor
 * Gradient Boosting Regressor
 
@@ -138,9 +132,9 @@ Advanced models (optional):
 * LSTM
 * GRU
 
-## Phase 6: Evaluation
+## Phase 5: Evaluation
 
-Performance metrics:
+Performance Metrics:
 
 * RMSE (Root Mean Squared Error)
 * MAE (Mean Absolute Error)
@@ -148,9 +142,7 @@ Performance metrics:
 
 ---
 
-# Implementation Details
-
-## Tools and Technologies
+# Tools and Technologies
 
 * Python
 * Pandas
@@ -161,18 +153,19 @@ Performance metrics:
 * Jupyter Notebook
 * Git & GitHub
 
-## Workflow
+---
+
+# Workflow
 
 1. Load Dataset
-2. Understand Dataset
+2. Explore Dataset
 3. Generate RUL Labels
 4. Perform Exploratory Data Analysis
-5. Analyze Features
-6. Engineer Features
-7. Train Machine Learning Models
-8. Evaluate Performance
-9. Compare Results
-10. Generate Insights
+5. Train Baseline Models
+6. Evaluate Performance
+7. Analyze Feature Importance
+8. Compare Models
+9. Generate Insights
 
 ---
 
@@ -188,14 +181,19 @@ TURBOFAN-RUL-PREDICTION/
 │
 ├── notebooks/
 │   ├── 01_EDA_FD001.ipynb
-│   ├── 02_Feature_Analysis.ipynb
-│   └── 03_Model_Training.ipynb
+│   └── 02_Model_Training.ipynb
 │
 ├── images/
+│   ├── engine_life_distribution.png
+│   ├── rul_distribution.png
+│   ├── correlation_heatmap.png
+│   ├── feature_importance.png
+│   └── actual_vs_predicted.png
 │
 ├── reports/
 │   ├── Week-01-Progress.md
 │   ├── Week-02-Progress.md
+│   ├── Week-03-Progress.md
 │   └── Final_Report.pdf
 │
 ├── README.md
@@ -210,28 +208,23 @@ TURBOFAN-RUL-PREDICTION/
 
 ### Project Familiarization
 
-* Studied project objectives and expected deliverables.
-* Understood Predictive Maintenance concepts and Remaining Useful Life (RUL) prediction.
+* Studied project objectives and internship deliverables.
+* Understood Predictive Maintenance concepts.
+* Learned about Remaining Useful Life (RUL) estimation.
 * Explored industrial applications of predictive maintenance.
 
 ### Dataset Understanding
 
 * Downloaded and explored the NASA C-MAPSS FD001 dataset.
 * Studied dataset structure and feature descriptions.
-* Identified operational settings and sensor measurements.
+* Examined operational settings and sensor measurements.
 * Reviewed training and testing dataset formats.
 
 ### Environment Setup
 
-* Configured Python development environment.
-* Installed required libraries including Pandas, NumPy, Matplotlib, Seaborn, and Scikit-Learn.
-* Set up Jupyter Notebook and GitHub repository structure.
-
-### Research and Learning
-
-* Studied machine learning techniques used in RUL prediction.
-* Reviewed predictive maintenance methodologies.
-* Collected technical resources and research references.
+* Configured development environment.
+* Installed required libraries.
+* Created project repository structure.
 
 ---
 
@@ -242,41 +235,71 @@ TURBOFAN-RUL-PREDICTION/
 * Performed dataset inspection and statistical analysis.
 * Conducted missing value analysis.
 * Investigated engine lifecycle characteristics.
-* Generated engine life distribution visualizations.
+* Generated engine lifetime distribution plots.
+* Generated Remaining Useful Life labels.
+* Analyzed RUL distribution.
+* Performed correlation analysis using heatmaps.
+* Investigated sensor degradation patterns.
+* Studied feature relationships.
 
-### Remaining Useful Life (RUL) Analysis
+### Key Visualizations
 
-* Generated RUL labels for training data.
-* Verified RUL calculations.
-* Analyzed RUL distribution across engine life cycles.
-
-### Correlation Analysis
-
-* Generated correlation heatmaps.
-* Investigated relationships among operational settings and sensor measurements.
-* Identified potentially informative features.
-
-### Sensor Trend Analysis
-
-* Analyzed degradation patterns using selected sensors.
-* Generated sensor trend visualizations.
-* Investigated sensor behavior across operational cycles.
-
-### Feature Understanding
-
-* Studied sensor variability.
-* Explored relationships between sensor measurements and engine degradation.
+* Engine Lifetime Distribution
+* RUL Distribution
+* Correlation Heatmap
+* Sensor Trend Analysis
 
 ---
 
-## Upcoming Work (Week 03)
+## Week 03
 
-* Feature Engineering
-* Feature Selection
-* Data Preparation
-* Baseline Machine Learning Models
-* Model Evaluation
-* Performance Analysis
+### Baseline Model Development
+
+#### Linear Regression
+
+Performance:
+
+* MAE: 34.05
+* RMSE: 44.34
+* R² Score: 0.57
+
+#### Random Forest Regressor
+
+Performance:
+
+* MAE: 29.69
+* RMSE: 41.52
+* R² Score: 0.62
+
+### Feature Importance Analysis
+
+Top Predictive Features:
+
+1. Sensor 11
+2. Sensor 9
+3. Sensor 4
+4. Sensor 12
+5. Sensor 7
+
+### Model Evaluation
+
+* Compared Linear Regression and Random Forest models.
+* Generated Actual vs Predicted RUL visualization.
+* Performed feature importance analysis.
+* Identified critical sensors related to engine degradation.
+
+---
+
+## Upcoming Work (Week 04)
+
+* Hyperparameter tuning
+* Feature selection
+* XGBoost implementation
+* Model optimization
+* Error reduction
+* Final model comparison
+* Project documentation
+* Final report preparation
 
 ---
 
@@ -286,30 +309,44 @@ TURBOFAN-RUL-PREDICTION/
 
 Completed analyses include:
 
-* Dataset structure and statistical summary analysis.
-* Missing value assessment.
-* Engine lifecycle distribution analysis.
-* Remaining Useful Life (RUL) generation and distribution analysis.
-* Correlation heatmap generation.
-* Sensor degradation trend analysis.
-* Feature variability assessment.
-
-## Key Findings
-
-* Engine degradation patterns are observable through selected sensor measurements.
-* Several sensors show significant variation as Remaining Useful Life decreases.
-* Correlation analysis indicates that certain features may be useful predictors for future machine learning models.
-* The dataset is suitable for predictive maintenance and Remaining Useful Life estimation tasks.
+* Dataset structure analysis
+* Statistical summary analysis
+* Missing value assessment
+* Engine lifecycle distribution analysis
+* RUL generation and distribution analysis
+* Correlation heatmap analysis
+* Sensor trend analysis
+* Feature variability assessment
 
 ## Model Results
 
-Model development will begin during Week 03.
+| Model                   | RMSE    | MAE     | R² Score |
+| ----------------------- | ------- | ------- | -------- |
+| Linear Regression       | 44.34   | 34.05   | 0.57     |
+| Random Forest Regressor | 41.52   | 29.69   | 0.62     |
+| XGBoost Regressor       | Planned | Planned | Planned  |
 
-| Model             | RMSE    | MAE     | R² Score |
-| ----------------- | ------- | ------- | -------- |
-| Linear Regression | Pending | Pending | Pending  |
-| Random Forest     | Pending | Pending | Pending  |
-| XGBoost           | Pending | Pending | Pending  |
+---
+
+## Key Findings
+
+* Random Forest outperformed Linear Regression across all evaluation metrics.
+* Sensor 11 emerged as the most influential predictor.
+* Sensor measurements contain significant information related to engine degradation.
+* The model predicts low-RUL engines more accurately than high-RUL engines.
+* The baseline model successfully captures overall degradation trends.
+
+---
+
+## Best Model
+
+### Random Forest Regressor
+
+Performance:
+
+* MAE: 29.69 cycles
+* RMSE: 41.52 cycles
+* R² Score: 0.62
 
 ---
 
@@ -322,15 +359,21 @@ Through this project, I learned:
 * Industrial sensor data analysis
 * Exploratory Data Analysis (EDA)
 * Correlation analysis and visualization
-* Feature engineering fundamentals
+* Linear Regression modeling
+* Random Forest Regression
+* Model evaluation using MAE, RMSE, and R²
+* Feature importance analysis
 * Machine Learning workflow for industrial applications
 
 ---
 
 # Future Improvements
 
+* Perform hyperparameter tuning.
+* Apply feature selection using importance scores.
 * Train on FD002, FD003, and FD004 datasets.
-* Implement deep learning approaches (LSTM/GRU).
+* Implement XGBoost Regressor.
+* Explore deep learning approaches (LSTM/GRU).
 * Deploy the model using Streamlit or Flask.
 * Build an interactive predictive maintenance dashboard.
 
