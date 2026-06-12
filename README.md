@@ -86,7 +86,7 @@ RUL = Maximum Engine Cycle - Current Cycle
 # Project Objectives
 
 * Understand engine degradation behavior.
-* Analyze operational and sensor measurements.
+* Analyze operational settings and sensor measurements.
 * Generate Remaining Useful Life labels.
 * Perform exploratory data analysis.
 * Develop machine learning models for RUL prediction.
@@ -164,14 +164,15 @@ Performance metrics:
 ## Workflow
 
 1. Load Dataset
-2. Explore Dataset
+2. Understand Dataset
 3. Generate RUL Labels
-4. Perform EDA
-5. Engineer Features
-6. Train Models
-7. Evaluate Performance
-8. Compare Results
-9. Generate Insights
+4. Perform Exploratory Data Analysis
+5. Analyze Features
+6. Engineer Features
+7. Train Machine Learning Models
+8. Evaluate Performance
+9. Compare Results
+10. Generate Insights
 
 ---
 
@@ -187,7 +188,7 @@ TURBOFAN-RUL-PREDICTION/
 │
 ├── notebooks/
 │   ├── 01_EDA_FD001.ipynb
-│   ├── 02_Preprocessing.ipynb
+│   ├── 02_Feature_Analysis.ipynb
 │   └── 03_Model_Training.ipynb
 │
 ├── images/
@@ -207,37 +208,102 @@ TURBOFAN-RUL-PREDICTION/
 
 ## Week 01
 
-Completed:
+### Project Familiarization
 
-* Project familiarization
-* Dataset understanding
-* Dataset exploration
-* Missing value analysis
-* Initial exploratory data analysis
-* Correlation analysis
-* Sensor trend analysis
-* RUL concept study
+* Studied project objectives and expected deliverables.
+* Understood Predictive Maintenance concepts and Remaining Useful Life (RUL) prediction.
+* Explored industrial applications of predictive maintenance.
 
-## Upcoming Work
+### Dataset Understanding
 
-* Feature engineering
-* Model development
-* Performance evaluation
-* Result analysis
+* Downloaded and explored the NASA C-MAPSS FD001 dataset.
+* Studied dataset structure and feature descriptions.
+* Identified operational settings and sensor measurements.
+* Reviewed training and testing dataset formats.
+
+### Environment Setup
+
+* Configured Python development environment.
+* Installed required libraries including Pandas, NumPy, Matplotlib, Seaborn, and Scikit-Learn.
+* Set up Jupyter Notebook and GitHub repository structure.
+
+### Research and Learning
+
+* Studied machine learning techniques used in RUL prediction.
+* Reviewed predictive maintenance methodologies.
+* Collected technical resources and research references.
+
+---
+
+## Week 02
+
+### Exploratory Data Analysis (EDA)
+
+* Performed dataset inspection and statistical analysis.
+* Conducted missing value analysis.
+* Investigated engine lifecycle characteristics.
+* Generated engine life distribution visualizations.
+
+### Remaining Useful Life (RUL) Analysis
+
+* Generated RUL labels for training data.
+* Verified RUL calculations.
+* Analyzed RUL distribution across engine life cycles.
+
+### Correlation Analysis
+
+* Generated correlation heatmaps.
+* Investigated relationships among operational settings and sensor measurements.
+* Identified potentially informative features.
+
+### Sensor Trend Analysis
+
+* Analyzed degradation patterns using selected sensors.
+* Generated sensor trend visualizations.
+* Investigated sensor behavior across operational cycles.
+
+### Feature Understanding
+
+* Studied sensor variability.
+* Explored relationships between sensor measurements and engine degradation.
+
+---
+
+## Upcoming Work (Week 03)
+
+* Feature Engineering
+* Feature Selection
+* Data Preparation
+* Baseline Machine Learning Models
+* Model Evaluation
+* Performance Analysis
 
 ---
 
 # Results
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
-* Dataset successfully explored.
-* Sensor relationships analyzed using correlation heatmaps.
-* Initial degradation patterns identified.
+Completed analyses include:
 
-### Model Results
+* Dataset structure and statistical summary analysis.
+* Missing value assessment.
+* Engine lifecycle distribution analysis.
+* Remaining Useful Life (RUL) generation and distribution analysis.
+* Correlation heatmap generation.
+* Sensor degradation trend analysis.
+* Feature variability assessment.
 
-To be updated after model training.
+## Key Findings
+
+* Engine degradation patterns are observable through selected sensor measurements.
+* Several sensors show significant variation as Remaining Useful Life decreases.
+* Correlation analysis indicates that certain features may be useful predictors for future machine learning models.
+* The dataset is suitable for predictive maintenance and Remaining Useful Life estimation tasks.
+
+## Model Results
+
+Model development will begin during Week 03.
 
 | Model             | RMSE    | MAE     | R² Score |
 | ----------------- | ------- | ------- | -------- |
@@ -255,8 +321,8 @@ Through this project, I learned:
 * Remaining Useful Life (RUL) estimation
 * Industrial sensor data analysis
 * Exploratory Data Analysis (EDA)
-* Feature engineering techniques
-* Regression modeling
+* Correlation analysis and visualization
+* Feature engineering fundamentals
 * Machine Learning workflow for industrial applications
 
 ---
