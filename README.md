@@ -181,7 +181,7 @@ TURBOFAN-RUL-PREDICTION/
 │
 ├── notebooks/
 │   ├── 01_EDA_FD001.ipynb
-│   └── 02_Model_Training.ipynb
+│   └── 02_Model_Development.ipynb
 │
 ├── images/
 │   ├── engine_life_distribution.png
@@ -194,6 +194,7 @@ TURBOFAN-RUL-PREDICTION/
 │   ├── Week-01-Progress.md
 │   ├── Week-02-Progress.md
 │   ├── Week-03-Progress.md
+│   ├── Week-04-Progress.md
 │   └── Final_Report.pdf
 │
 ├── README.md
@@ -290,16 +291,46 @@ Top Predictive Features:
 
 ---
 
-## Upcoming Work (Week 04)
+## Week 04
 
-* Hyperparameter tuning
-* Feature selection
-* XGBoost implementation
-* Model optimization
-* Error reduction
-* Final model comparison
-* Project documentation
-* Final report preparation
+### Model Optimization
+
+The primary objective of Week 04 was to improve model performance and evaluate advanced machine learning algorithms.
+
+### Feature Selection
+
+Based on feature importance analysis, the most influential sensors were selected:
+
+- Sensor 11
+- Sensor 9
+- Sensor 4
+- Sensor 12
+- Sensor 7
+- Sensor 14
+- Sensor 21
+- Sensor 15
+- Sensor 3
+- Sensor 2
+
+The model was retrained using only these high-importance features.
+
+#### Optimized Random Forest Performance
+
+- MAE: 29.58
+- RMSE: 41.42
+- R² Score: 0.625
+
+### XGBoost Regressor
+
+Performance:
+
+- MAE: 53.90
+- RMSE: 65.61
+- R² Score: 0.058
+
+### Final Model Selection
+
+Random Forest Regressor was selected as the final model due to its superior performance and stability.
 
 ---
 
@@ -320,21 +351,23 @@ Completed analyses include:
 
 ## Model Results
 
-| Model                   | RMSE    | MAE     | R² Score |
-| ----------------------- | ------- | ------- | -------- |
-| Linear Regression       | 44.34   | 34.05   | 0.57     |
-| Random Forest Regressor | 41.52   | 29.69   | 0.62     |
-| XGBoost Regressor       | Planned | Planned | Planned  |
 
+| Model | RMSE | MAE | R² Score |
+|---------|---------|---------|---------|
+| Linear Regression | 44.34 | 34.05 | 0.57 |
+| Random Forest Regressor | 41.52 | 29.69 | 0.62 |
+| Optimized Random Forest | 41.42 | 29.58 | 0.625 |
+| XGBoost Regressor | 65.61 | 53.90 | 0.058 |
 ---
 
 ## Key Findings
 
-* Random Forest outperformed Linear Regression across all evaluation metrics.
-* Sensor 11 emerged as the most influential predictor.
-* Sensor measurements contain significant information related to engine degradation.
-* The model predicts low-RUL engines more accurately than high-RUL engines.
-* The baseline model successfully captures overall degradation trends.
+- Random Forest consistently outperformed all evaluated models.
+- Sensor 11 emerged as the most influential predictor of Remaining Useful Life.
+- Feature selection slightly improved model performance.
+- XGBoost did not outperform Random Forest on the FD001 dataset.
+- Sensor measurements contain valuable information related to engine degradation behavior.
+- The developed model successfully captures degradation trends and estimates Remaining Useful Life.
 
 ---
 
@@ -344,9 +377,16 @@ Completed analyses include:
 
 Performance:
 
-* MAE: 29.69 cycles
-* RMSE: 41.52 cycles
-* R² Score: 0.62
+- MAE: 29.69 cycles
+- RMSE: 41.52 cycles
+- R² Score: 0.62
+
+Reason for Selection:
+
+- Best overall performance.
+- Lowest prediction error.
+- Highest predictive reliability.
+- Stable results across experiments.
 
 ---
 
@@ -369,13 +409,13 @@ Through this project, I learned:
 
 # Future Improvements
 
-* Perform hyperparameter tuning.
-* Apply feature selection using importance scores.
-* Train on FD002, FD003, and FD004 datasets.
-* Implement XGBoost Regressor.
-* Explore deep learning approaches (LSTM/GRU).
-* Deploy the model using Streamlit or Flask.
-* Build an interactive predictive maintenance dashboard.
+- Train models using FD002, FD003, and FD004 datasets.
+- Explore advanced feature engineering techniques.
+- Implement deep learning models such as LSTM and GRU.
+- Develop real-time predictive maintenance solutions.
+- Deploy the model using Streamlit or Flask.
+- Build an interactive predictive maintenance dashboard.
+- Integrate model monitoring and maintenance scheduling features.
 
 ---
 
